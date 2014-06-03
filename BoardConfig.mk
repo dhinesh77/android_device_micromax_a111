@@ -24,6 +24,11 @@ BOARD_SYSTEMIMAGE_PARTITION_SIZE := 0x105c0000
 BOARD_USERDATAIMAGE_PARTITION_SIZE := 0x105c0000
 BOARD_FLASH_BLOCK_SIZE := 131072
 
+# Targeting Prebuilt kernel because no source code avail... 
 TARGET_PREBUILT_KERNEL := device/micromax/a111/kernel
 
+TARGET_RECOVERY_PIXEL_FORMAT := RGBX_8888
+BOARD_CUSTOM_GRAPHICS := ../../../device/micromax/a111/recovery/graphics.c
+BOARD_UMS_LUNFILE := "/sys/devices/platform/msm_hsusb/gadget/lun0/file"
+DEVICE_RESOLUTION := 480x854
 BOARD_HAS_NO_SELECT_BUTTON := true

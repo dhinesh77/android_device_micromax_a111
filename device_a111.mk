@@ -17,6 +17,12 @@ endif
 PRODUCT_COPY_FILES += \
     $(LOCAL_KERNEL):kernel
 
+#This blobs are not needed but still copying..
+# Recovery
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/recovery/rmt_storage_recovery:recovery/root/rmt_storage_recovery \
+    $(LOCAL_PATH)/recovery/ueventd.rc:root/ueventd.rc
+
 $(call inherit-product, build/target/product/full.mk)
 
 PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
